@@ -9,11 +9,13 @@ const outputSection = document.querySelector('[data-js="output-section"]');
 const output = document.querySelector('[data-js="output"]');
 
 pizzaInput1.addEventListener("input", () => {
-  // write your code here
+  updatePizzaDisplay(pizza1, pizzaInput1.value);
+  calculatePizzaGain();
 });
 
 pizzaInput2.addEventListener("input", () => {
-  // write your code here
+  updatePizzaDisplay(pizza2, pizzaInput2.value);
+  calculatePizzaGain();
 });
 
 // Task 1

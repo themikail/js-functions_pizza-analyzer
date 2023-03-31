@@ -21,8 +21,25 @@ pizzaInput2.addEventListener("input", () => {
 // Task 1
 // define the function calculatePizzaGain here
 
+function calculatePizzaGain() {
+  const gain = pizzaInput2.value - pizzaInput1.value;
+  updateOutputColor(gain);
+}
+
 // Task 2
 // define the function updatePizzaDisplay here
+function updatePizzaDisplay(pizza, value) {
+  pizza.style.transform = `scale(${value / 10})`;
+}
 
 // Task 3
 // define the function updateOutputColor here
+
+function updateOutputColor(gain) {
+  if (gain >= 0) {
+    output.style.color = "green";
+  } else {
+    output.style.color = "red";
+  }
+  output.innerText = gain;
+}
